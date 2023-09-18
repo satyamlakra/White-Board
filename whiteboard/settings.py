@@ -136,6 +136,7 @@ USE_I18N = True
 
 USE_TZ = True
 EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
+EMAIL_HOST_USER="supprt@gmail.com"
 CRISPY_TEMPLATE_PACK = 'uni_form'
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
