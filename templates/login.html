@@ -1,0 +1,213 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+      
+<head>
+		        <!-- Favicons -->
+  <link href="{% static 'LogoPNG.png' %}" rel="icon">
+  <link href="{% static 'LogoPNG.png' %}" rel="apple-touch-icon">
+  	<title>Wazir's GST App.</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900&display=swap" rel="stylesheet">
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	
+	<link rel="stylesheet" href="{%static 'css/style.css'%}">
+     <script src="https://kit.fontawesome.com/65b643e4a1.js" crossorigin="anonymous"></script>
+<style>
+       .background-radial-gradient {
+      background-color: hsl(41deg 39% 29%);
+      background-image: radial-gradient(650px circle at 0% 0%,
+          hsl(218, 41%, 35%) 15%,
+          hsl(218, 41%, 30%) 35%,
+          hsl(218, 41%, 20%) 75%,
+          hsl(218, 41%, 19%) 80%,
+          transparent 100%),
+        radial-gradient(1250px circle at 100% 100%,
+          hsl(218, 41%, 45%) 15%,
+          hsl(218, 41%, 30%) 35%,
+          hsl(218, 41%, 20%) 75%,
+          hsl(218, 41%, 19%) 80%,
+          transparent 100%);     
+ }
+.ftco-section {
+  {% comment %} padding-top: 5% !important;
+  padding-bottom: 24% !important; {% endcomment %}
+  min-height: 100vh;
+
+
+}    
+    .wrap {
+  
+    box-shadow: 0 4px 8px 0 rgb(0 0 0 / 60%), 0 6px 20px 0 rgb(0 0 0 / 15%);
+    }
+    .social-media .social-icon span {
+    color: #ffffff !important;
+}
+.social-icon:hover{
+  transform:scale(1.4);
+}
+.social-icon{
+      transition-duration: 1.5s;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.6), 0 6px 20px 0 rgba(0, 0, 0, 0.15);
+margin-right:9px !important;	
+}
+.btn.btn-primary:hover {
+    border: 1px solid #ffffff;
+    background: #062f44;
+    color: #fff;
+}
+.btn.btn-primary {
+    border: 1px solid #000;
+    background: #ffffff;
+    color: #000;
+    width: 55%;
+    margin-left: 20%;
+}
+.form-control{
+     background: rgb(255 255 255 / 87%);
+}    
+.form-group a {
+    color: #000;
+}
+.form-group a:hover{
+    text-decoration:underline !important;
+}
+
+.checkbox-primary {
+    color: #000;
+}
+.checkbox-primary:hover {
+    text-decoration:underline;
+}
+.checkmark:after {
+    color: rgb(231 231 231 / 77%);
+}
+.checkbox-primary input:checked ~ .checkmark:after {
+    color: #000000b0;
+}
+@media (max-width: 768px){
+  .ftco-section {
+    padding: 1em 0;
+}
+}
+@media (min-width: 1920px){
+  .ftco-section {
+    padding: 15em 0;
+}
+}
+@media screen and (min-width: 768px) and (max-device-width: 1368px){
+  .ftco-section {
+    padding: 8em 0;
+}
+}
+
+body{
+  font-family: Poppins,sans-serif !important;
+}
+.btn-outline-white:hover{
+  transform:scale(1.2);
+  background:#f9f871;
+  color:#000;
+}
+.submit{
+  transition: all 1.5s;
+}
+</style>
+	</head>
+	<body>
+	<section class="ftco-section background-radial-gradient">
+           {% comment %} <h1 class="my-5 display-5 fw-bold ls-tight" style="color: hsl(218, 81%, 95%)">
+        <span style="color:  hsl(173deg 100% 77%)">G</span>eneral 
+          <span style="color:  hsl(86deg 81% 81%)">S</span>ervice <span style="color: hsl(49deg 100% 84%)">T</span>ax <br />
+        </h1> {% endcomment %}
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="col-md-12 col-lg-10">
+					<div class="wrap d-md-flex">
+						<div class="text-wrap p-4 p-lg-5 text-center d-flex align-items-center order-md-last background-radial-gradient" >
+							<div class="text w-100">
+								<h2 style="letter-spacing: 6px;">WELCOME TO <h1 class="my-5 display-5 fw-bold ls-tight" style="color: hsl(218, 81%, 95%)">
+        <span style="color: #ffffff;
+    letter-spacing: 3px;
+    font-size: 20px;
+    font-weight: bolder;text-shadow: 2px 3px black;">WAZIR’S </span>
+          <span style="color: #ffffff;
+          letter-spacing: 5px;
+          font-weight: bolder;
+          text-shadow: 2px 3px black;">𝔼𝕃𝕀ℕ𝕋 </span></h2>
+								<p>Don't have an account?</p>
+								<a href="/signup" class="btn btn-white btn-outline-white" style="box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px !important;transition: all 1.5s;">REGISTER HERE</a>
+                <h4 style="color:#ffffff;margin-top:10px;">Or</h4>
+                <a href="/" class="btn btn-success btn-outline-white" style="box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px !important; transition: all .5s ease-in-out;">CLICK HERE TO GO HOME</a>
+							</div>
+			      </div>
+						<div class="login-wrap p-4 p-lg-5" style="background-color: #ffffff78;filter:blur(-3px);">
+			      	<div class="d-flex">
+			      		<div class="w-100">
+			      			<h5 class="mb-4" style="margin-top:4%; letter-spacing:2px;">Follow:</h5>
+                                   <h2 class="mb-4" style="font-size:18px; letter-spacing:2px; font-weight:500;">LOG IN </h2>
+			      		</div>
+								<div class="w-100">
+									<p class="social-media d-flex justify-content-end">
+										<a  class="social-icon d-flex align-items-center justify-content-center" style="background-color: #3b5998;" href="https://www.facebook.com/wazirssecuritiespvtltd"><span class="fa fa-facebook"></span></a>
+                                                  <a  class="social-icon d-flex align-items-center justify-content-center" style="background-color: #55acee;"href="https://twitter.com/WazirSecurities"><span class="fab fa-twitter"></span></a>
+                                                  <a  class="social-icon d-flex align-items-center justify-content-center" style="background-color: #dd4b39;"href="https://www.wazirssecurities.com/"><span class="fab fa-google"></span></a>
+                                                  <a  class="social-icon d-flex align-items-center justify-content-center" style="background-color: #ac2bac;"href="https://www.instagram.com/wazirssecurities/"><span class="fab fa-instagram"></span></a>
+
+									</p>
+								</div>
+			      	</div>
+                         {% for message in messages %}
+                                        <div class="alert alert-primary d-flex align-items-center" role="alert" 
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-exclamation-triangle-fill flex-shrink-0 me-2" viewBox="0 0 16 16" role="img" aria-label="Warning:">
+                                            <path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+                                            </svg>
+                                            <div>
+                                            {{message}}
+                                            </div>
+                                      </div>
+                                     {%endfor%}
+							<form  class="signin-form" method="post" action="/">{% csrf_token %}
+			      		<div class="form-group mb-3">
+			      			<input type="email" class="form-control" placeholder="E-mail" name="username" style="color:#000 !important"required>
+			      		     <label class="label" for="name"></label>
+                              </div>
+		            <div class="form-group mb-3">
+                         <input type="password" class="form-control" placeholder="Password" name="p1" style="color:#000 !important"required>
+		            	<label class="label" for="password"></label>
+		            </div>
+		            <div class="form-group">
+		            	<button type="submit" class="form-control btn btn-primary submit px-3">LOG IN</button>
+		            </div>
+		            <div class="form-group d-md-flex">
+		            	<div class="w-50 text-left">
+			            	<label class="checkbox-wrap checkbox-primary mb-0">Remember Me
+									  <input type="checkbox" checked>
+									  <span class="checkmark"></span>
+										</label>
+									</div>
+									<div class="w-50 text-md-right">
+										<a href="/password_reset/">Forgot Password</a>
+									</div>
+		            </div>
+		          </form>
+		        </div>
+		      </div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	{% comment %} <script src="'js/jquery.min.js"></script>
+  <script src="js/popper.js"></script>
+  <script src="js/bootstrap.min.js"></script> {% endcomment %}
+  {% comment %} <script src="{%static '/js/main.js'%}"></script> {% endcomment %}
+
+	</body>
+
+</html>
+
+

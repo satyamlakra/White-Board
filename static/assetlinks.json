@@ -1,0 +1,6 @@
+[{
+        "relation": ["delegate_permission/common.handle_all_urls"],
+        "target" : { "namespace": "android_app", "package_name": "in.co.wazirs.www.twa",
+                     "sha256_cert_fingerprints": ["2D:13:AF:D5:C5:60:98:69:6C:E2:17:0C:72:F9:D9:2F:53:DC:0A:E1:2C:64:E7:61:09:90:9D:A1:30:D4:CD:93"] }
+      }
+]

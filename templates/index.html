@@ -1,0 +1,855 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  {% load pwa %}
+  {% progressive_web_app_meta %}
+  <link rel="mainfest" href="mainfest.json"> 
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title> WAZIR’S 𝔼𝕃𝕀ℕ𝕋</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="{% static 'AppImages/ios/128.png' %}" rel="icon">
+  <link href="{% static 'AppImages/ios/128.png' %}" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Raleway:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  
+  <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+  <link href="{% static  'vendor/aos/aos.css' %}" rel="stylesheet">
+  <link href="{% static  'vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/65b643e4a1.js" crossorigin="anonymous"></script>
+    
+
+  <!-- Template Main CSS File -->
+  <link href="{% static 'css/main.css' %}" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: Impact - v1.0.0
+  * Template URL: https://bootstrapmade.com/impact-bootstrap-business-website-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+  
+  <style>
+.username{
+    color: #000 !important;
+    margin-top: 23px;
+}
+.description{
+  text-align: initial;
+
+}
+.bts {
+    color: #000 !important;
+    border-radius: 9px;
+    background: #ffffff;
+    position: relative;
+    left: 0%;
+    border-color: #ffffff !important;
+    margin-right: 2%;
+    margin-bottom: 2%;
+}
+.bi-x::before {
+    content: "\f62a";
+    color: #000;
+}
+.navbar {
+    
+    {% comment %} position: relative; {% endcomment %}
+    {% comment %} left: -10%; {% endcomment %}
+    {% comment %} background: #00586cb8; {% endcomment %}
+    {% comment %} width: 37%; {% endcomment %}
+    {% comment %} padding-right: 1%; {% endcomment %}
+    color:#000;
+}
+.header{
+transition: all 0.5s;
+    z-index: 997;
+   
+    height: 90px;
+    background-color: #ffffff;
+}
+#company-logo{
+width: auto;
+height: 63px;
+}
+.navbar a{
+color: rgb(0 0 0 ) !important;
+}
+.form-control {
+    display: block;
+    width: 100%;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border-radius: 0.375rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+.custombtn{
+    margin-bottom: 5%;
+}
+.custombtn2 {
+    position: relative;
+    left: 21%;
+}
+.custombtn3 {
+    position: relative;
+    left: 41%;
+}
+
+.btn:hover {
+    color: var(--bs-btn-hover-color);
+    background-color: #008374;
+    border-color: var(--bs-btn-hover-border-color);
+}
+
+.nav-elements{
+    font-weight: bolder !important;
+    font-size: 15px !important;
+}
+.purecounter{
+min-width: 90px;
+    padding-right: 15px;
+    margin-right: 8%;
+}
+.icon-box:hover{
+  transform:scale(1.0);
+}
+body{
+  overflow-x:hidden;
+}
+.username{
+color: #000 !important;
+  background:#ffffff !important;
+
+    margin-top: 0% !important;
+    margin-left: 0% !important;
+}
+.username:hover{
+    background-color: #008374 !important;
+
+}
+.navbar ul {
+  background:#ffffff !important;
+}
+
+.dropdown{
+  {% comment %} margin-top:6%; {% endcomment %}
+  position: relative;
+  {% comment %} top: 52px; {% endcomment %}
+  {% comment %} margin-bottom:2%; {% endcomment %}
+}
+.mb-4 {
+    margin-bottom: -0.5rem!important;
+}
+.footer-web{
+ 
+    background-color: #00586c !important;
+}
+.button-texture{
+  border-radius: 50px 50px 50px 50px;
+}
+.button-texture:hover{
+  transform:scale(1.2);
+  
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.copyright{
+      color: #ffffff  !important;
+    font-size: 17px;
+    font-weight: bolder;
+}
+.copyright:hover{
+  text-decoration:underline !important;
+}
+.company-name-footer{
+      color: #ffffff !important;
+      letter:spacing:3px;
+      font-weight: bolder;
+}
+.search-bar{
+  display:none;
+}
+
+.purecounter {
+  min-width: 23px !important;
+  margin-right: -2% !important;
+}
+.mobile-nav-show{
+  color: yellowgreen;
+}
+.text-counter{
+  margin-left:-77px !important;
+}
+.stats-counter .stats-item p {
+    margin: 0;
+    font-family: var(--font-primary);
+    font-size: 14px;
+    width: 100%;
+    text-align: center;
+}
+@media (min-width: 1200px){
+  .ftco-section {
+    padding: 5em 0;
+}
+}
+@media (max-width: 768px) {
+  .index-heading{
+    font-size: 33px !important;
+  }
+}
+@media (max-width: 768px) {
+  .app-name{
+    padding-right: 18px;
+  }
+}
+body{
+  cursor: default;
+}
+@media (max-width: 1366px){
+  .index-heading{
+    font-size: 39px;
+  }
+}
+@media screen and (min-width: 1368px) and (max-device-width: 1920px){
+  .watchlist-drop{
+    margin-top: 5px;
+  }
+}
+@media screen and (min-width: 768px) and (max-device-width: 1368px){
+  .watchlist-drop{
+    margin-top: 10px;
+  }
+}
+
+  </style>
+
+</head>
+
+<body >
+
+  <!-- ======= Header ======= -->
+  {% comment %} <section id="topbar" class="topbar d-flex align-items-center">
+    <div class="container d-flex justify-content-center justify-content-md-between">
+      <div class="contact-info d-flex align-items-center">
+      
+      </div>
+      <div class="social-links d-none d-md-flex align-items-center">
+        
+      </div>
+    </div>
+  </section><!-- End Top Bar --> {% endcomment %}
+   
+
+  <header id="header" class="header d-flex align-items-center">
+
+    <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+      <a href="https://wazirs.in/" target=_blank>
+     <img
+            src="{% static 'wazirs.png' %}"
+             id="company-logo"   alt="Sample image" data-aos="zoom-in" data-aos-delay="100">
+        </a></div>
+          
+      <!-- Search form -->
+      
+      <nav id="navbar" class="navbar" data-aos="fade-in">
+        {% comment %} {% if request.get_full_path == "/index/" or request.get_full_path == "/watchlist/" %} {% endcomment %}
+         <ul>
+          <li ><a class="nav-elements" href="/" >HOME</a></li>
+          <li class="dropdown" ><a class="nav-elements" href="#" ><span>SERVICES</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+            <ul>
+              <li><a class="nav-elements" href="/mca">COMPANY MASTER DATA </a></li>
+              <li><a class="nav-elements" href="/director">DIRECTOR MASTER DATA </a></li>
+              <li><a class="nav-elements" href="/aootp">KNOW YOUR A.O</a></li>
+              <li><a class="nav-elements" href="/gst">GSTIN DETAILS</a></li>
+              <li><a class="nav-elements" href="/qrscanner/not">QR CODE SCANNER </a></li>
+              <li><a class="nav-elements" href="/watchlist">GST SEARCH HISTORY  </a></li>
+            </ul>
+          </li>
+          <li ><a class="nav-elements" href="/#call-to-action" >WHO WE ARE</a></li>
+          <li><a class="nav-elements" href="/#contact">CONTACT</a></li>
+          {% if user.is_authenticated %}
+             
+             <li><a class="nav-elements" href="/logout">LOG OUT </a></li>
+          {% else %} 
+          <li><a class="nav-elements" href="/index">SIGN IN </a></li>
+          {% endif %}    
+          <li class="nbsp"></li>
+          <li><button type="button" class="btn btn-outline-dark btn-rounded username bts" data-mdb-ripple-color="dark">
+      {% if user.is_authenticated %}  
+      <a href="/" class="logo d-flex align-items-center">
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+        <!-- <img src="assets/img/logo.png" alt=""> -->
+       
+           <h4 id="username" style="margin-bottom: -3%;">Hi, {{ request.user.username}}<span></span></h4>
+           
+      </a>
+      {% endif %}
+      </button></li>  
+     </ul>
+ </nav><!-- .navbar -->  
+      
+      
+
+      <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
+      <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
+      
+    </div>
+    
+  </header><!-- End Header -->
+  <!-- End Header -->
+
+  <!-- ======= Hero Section ======= -->
+  {% block content %}
+  <section id="hero" class="hero">
+
+    <div class="container position-relative ">
+      <div class="row gy-5 aos-init aos-animate" data-aos="fade-in">
+        <div class="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center text-center text-lg-start" data-aos="zoom-out" data-aos-delay="100">
+          
+          <h2 class="index-heading"><span style="text-shadow: 2px 3px black;">Welcome To </span><span style="    font-size: 20px;
+            color: #000;
+            text-shadow: 1px 2px #062f44;
+            font-weight: bolder;"> WAZIR’S </span><span class="app-name"style="    text-shadow: 4px 4px black;letter-spacing: 5px;
+            padding-left: 4px;">𝔼𝕃𝕀ℕ𝕋 </span> </h2>{% csrf_token %}
+          <p class= "description" style="margin-bottom:10px;letter-spacing: 1px;    font-size: 19px;">What is 𝔼𝕃𝕀ℕ𝕋 ?</p>
+
+          <p class= "description" style="letter-spacing: 1px;    font-size: 19px;">𝔼𝕃𝕀ℕ𝕋  is a handy and comfortable to use app which helps you to verify the correctness of a GSTIN by validating it with GST system. Moreover, It helps you to track the return on that GSTIN. Here, You can even Search for the all GST details with the help of PAN NUMBER AND NAME of an organization. Apart from this, you can get the Company Master Data of any Organization/ Companies just by entering the CIN number.</p>
+            
+            {% comment %} <div class="d-flex justify-content-center justify-content-lg-start" style="padding-top: 3%;"> {% endcomment %}
+            
+              {% comment %} <a href="https://www.youtube.com/watch?v=2DKLtPYbpnk" class=" d-flex align-items-center"><span>Watch Video</span></a> {% endcomment %}
+            
+          
+             {% comment %} <div class="md-form active-pink-2 mb-3">
+              <h4 id="services" style="    color: #ffffff;
+                  font-size: 36px;
+                  font-family: serif;
+                  word-spacing: 3px;
+                  letter-spacing: 4px;
+                  margin-bottom:1%;
+              ">Select Mode</h4>
+            <input class="btn-check " onclick="pram(this)" type="radio" id="age1" name="type" value="30" autocomplete="off">
+            <label class="btn btn-light bts gstin" for="age1">GSTIN</label>
+            <input class="btn-check " onclick="pram(this)" type="radio" id="age2" name="type" value="60" autocomplete="off">
+            <label class="btn btn-light bts" for="age2">PAN CARD</label>
+            <input class="btn-check " onclick="pram(this)" type="radio" id="age3" name="type" value="100" autocomplete="off">
+            <label class="btn btn-light bts" for="age3">BY NAME</label><br>
+            <input class="form-control search-bar" type="text" placeholder="Search" aria-label="Search">
+            <h4 class="search-bar"style="    color: #ffffff;
+            font-size: 15px;
+            font-family: serif;
+            word-spacing: 3px;
+            letter-spacing: 4px;
+            margin-bottom:1%;
+        margin-top:1%;
+        "> Press ENTER to Search.</h4>   	   
+         </div>  {% endcomment %}
+        </div>
+        <div class="col-lg-6 order-1 order-lg-2">
+	      <img src="{% static 'wazirsBodyImage.png' %}" class="img-fluid" alt="" data-aos="zoom-out" data-aos-delay="100" >
+        </div>
+        <div class="col-lg-6 order-1 order-lg-2">
+        </div>
+        
+      </div>
+    </div>
+
+    <div id="services" class="icon-boxes position-relative">
+      <div class="container position-relative">
+        <div class="row gy-4 mt-5">
+
+          
+          <!--End Icon Box -->
+          <div class="col-xl-4 col-md-6 focus-2" data-aos="fade-down" data-aos-delay="200">
+            <div class="icon-box">
+              <div class="icon"><i class="bi bi-collection-fill"></i></div>
+              <h4 class="title"><a href="/mca" class="stretched-link">MASTER COMPANY DATA</a></h4>
+            </div>
+          </div>
+
+          <div class="col-xl-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="icon-box">
+              <div class="icon"><i class="fa-solid fa-building-user"></i></div>
+              <h4 class="title"><a href="/director" class="stretched-link">DIRECTOR'S MASTER DATA</a></h4>
+            </div>
+          </div>
+
+          <div class="col-xl-4 col-md-6 focus-2" data-aos="fade-down" data-aos-delay="200">
+            <div class="icon-box">
+              <div class="icon"><i class="bi bi-collection-fill"></i></div>
+              <h4 class="title"><a href="/aootp" class="stretched-link">KNOW YOUR A.O </a></h4>
+            </div>
+          </div>
+          <br>
+
+          <div class="col-xl-4 col-md-6 focus-2" data-aos="fade-down" data-aos-delay="200" >
+            <div class="icon-box">
+              <div class="icon"><i class="bi bi-currency-rupee"></i></div>
+              <h4 class="title"><a href="/gst" class="stretched-link">GST & RETURN DETAILS</a></h4>
+            </div>
+          </div>
+
+        
+
+          <div class="col-xl-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="icon-box">
+              <div class="icon"><i class="bi bi-qr-code"></i></div>
+              <h4 class="title"><a href="/qrscanner/not" class="stretched-link">QR CODE SCANNER</a></h4>
+            </div>
+          </div>
+
+
+          <div class="col-xl-4 col-md-6 focus-2" data-aos="fade-up" data-aos-delay="200">
+            <div class="icon-box">
+              <div class="icon"><i class="bi bi-clock-history"></i></div>
+              <h4 class="title"><a href="/watchlist" class="stretched-link">GST SEARCH HISTORY </a></h4>
+            </div>
+          </div> 
+          <!--End Icon Box -->
+        
+          <!--End Icon Box --> 
+        
+          
+          <!--End Icon Box -->
+
+        </div>
+      </div>
+    </div>
+
+    </div>
+  </section>
+  <!-- End Hero Section -->
+  <div style="width: auto ; height: 100%" id="reader"></div>
+  <main id="main">
+
+    <!-- ======= About Us Section ======= -->
+
+
+
+    <!-- End About Us Section -->
+
+    <!-- ======= Clients Section ======= -->
+    {% comment %} <section id="clients" class="clients">
+      <div class="container" data-aos="zoom-out">
+
+        <div class="clients-slider swiper">
+          <div class="swiper-wrapper align-items-center">
+            <div class="swiper-slide"><img src="assets/img/clients/client-1.png" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="assets/img/clients/client-2.png" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="assets/img/clients/client-3.png" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="assets/img/clients/client-4.png" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="assets/img/clients/client-5.png" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="assets/img/clients/client-6.png" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="assets/img/clients/client-7.png" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="assets/img/clients/client-8.png" class="img-fluid" alt=""></div>
+          </div>
+        </div>
+
+      </div>
+    </section>{% endcomment %}<!-- End Clients Section --> 
+   
+    {% comment %} <section id="stats-counter " class="stats-counter focus">
+      <div class="container" data-aos="fade-up">
+
+        <div class="row gy-4 align-items-center">
+
+          <div class="col-lg-6">
+          <img src="assets/img/stats-img.svg" alt="" class="img-fluid"> 
+          </div>
+
+          <div class="col-lg-6">
+
+            <div class="stats-item d-flex align-items-center">
+              <span data-purecounter-start="0" data-purecounter-end="600" data-purecounter-duration="1" class="purecounter"></span><span class="sum"style=";
+    right: 41.5%;
+    margin-right: 4px;">+</span>
+              <p class= "text-counter"><strong style="position: relative;
+    right: 7%;">Happy Clients</strong></p>
+            </div><!-- End Stats Item -->
+
+            <div class="stats-item d-flex align-items-center">
+              <span data-purecounter-start="0" data-purecounter-end="9" data-purecounter-duration="1" class="purecounter"></span><span class="sum"style="
+    right: 45.3%;">+</span>
+              <p class= "text-counter"><strong>    Years of experience</strong></p>
+            </div><!-- End Stats Item -->
+
+            <div class="stats-item d-flex align-items-center">
+              <span data-purecounter-start="0" data-purecounter-end="80" data-purecounter-duration="1" class="purecounter"></span><span class="sum"style="
+    right: 43.5%;">+ </span>
+              <p class= "text-counter"><strong>Dedicated Experts</strong></p>
+            </div>
+
+            <div class="stats-item d-flex align-items-center">
+              <span data-purecounter-start="0" data-purecounter-end="100" data-purecounter-duration="1" class="purecounter" ></span><span class="percent" style="   
+    right: 40.5%;">%</span>
+              <p class= "text-counter"><strong style="position: relative;
+    right: 9%;
+">Clarity Rate</strong></p>
+            </div><!-- End Stats Item -->
+
+          </div>
+
+        </div>
+
+      </div>
+    </section> {% endcomment %}
+    <!-- ======= Call To Action Section ======= -->
+    <section id="call-to-action" class="call-to-action">
+      <div class="container text-center" data-aos="zoom-out">
+        <a href="{{link}}" class="glightbox play-btn"></a>
+        <h3>Know More About Us</h3>
+        <p> Here is a Short CLip of Who We Are And What We Do. </p>
+        <a class="glightbox cta-btn" href="{{link}}">Play</a>
+      </div>
+    </section><!-- End Call To Action Section -->
+
+    <!-- ======= Our Services Section ======= -->
+    
+    <!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-header">
+          <h2>Contact</h2>
+          <p style="color:#000">In Case Of Any Need, You Can Connect With Us.</p>
+        </div>
+
+        <div class="row gx-lg-0 gy-4">
+
+          <div class="col-lg-4">
+
+            <div class="info-container d-flex flex-column align-items-center justify-content-center">
+              <div class="info-item d-flex">
+                <i class="bi bi-geo-alt flex-shrink-0"></i>
+                <div>
+                  <h4>Location:</h4>
+                  <p>Unit No. 612, 6th Floor, Spaze Boulevard, Sector 47, Sohna Road, Gurugram, Haryana</p>
+                </div>
+              </div><!-- End Info Item -->
+
+              <div class="info-item d-flex">
+                <i class="bi bi-envelope flex-shrink-0"></i>
+                <div>
+                  <h4>Email:</h4>
+                  <p>supprt.elint@gmail.com</p>
+                </div>
+              </div><!-- End Info Item -->
+
+              <div class="info-item d-flex">
+                <i class="bi bi-phone flex-shrink-0"></i>
+                <div>
+                  <h4>Call:</h4>
+                  <p>+91 9289392150</p>
+                </div>
+              </div><!-- End Info Item -->
+
+              <div class="info-item d-flex">
+                <i class="bi bi-clock flex-shrink-0"></i>
+                <div>
+                  <h4>Open Hours:</h4>
+                  <p>Mon-Fri: 10 AM - 6 PM</p>
+                </div>
+              </div><!-- End Info Item -->
+            </div>
+
+          </div>
+
+          <div class="col-lg-8">
+            <div  class="php-email-form">
+              <div class="row">
+                <div class="col-md-6 form-group">
+                  <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
+                </div>
+                <div class="col-md-6 form-group mt-3 mt-md-0">
+                  <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
+                </div>
+              </div>
+              <div class="form-group mt-3">
+                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
+              </div>
+              <div class="form-group mt-3">
+                <textarea class="form-control" name="message" rows="7"  id="messages" placeholder="Message" required></textarea>
+              </div>
+              <div class="my-3">
+                <div class="loading">Loading</div>
+                <div class="error-message"></div>
+                <div class="sent-message">Your message has been sent. Thank you!</div>
+              </div>
+              <div class="text-center"><button id="sendmesssage" type="submit">Send Message</button></div>
+            </div>
+          </div><!-- End Contact Form -->
+
+        </div>
+
+      </div>
+    </section><!-- End Contact Section -->
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+   <footer class="bg-light text-center text-white footer-web">
+  <!-- Grid container -->
+  <div class="container p-4 pb-0">
+    <!-- Section: Social media -->
+    <section class="mb-4">
+      <!-- Facebook -->
+      <a
+        class="btn text-white btn-floating m-1 button-texture"
+        style="background-color: #3b5998;"
+        href="https://www.facebook.com/wazirssecuritiespvtltd"
+        role="button"
+        ><i class="fab fa-facebook-f"></i
+      ></a>
+
+      <!-- Twitter -->
+      <a
+        class="btn text-white btn-floating m-1 button-texture"
+        style="background-color: #55acee;"
+        href="https://twitter.com/WazirSecurities"
+        role="button"
+        ><i class="fab fa-twitter"></i
+      ></a>
+
+      <!-- Google -->
+      <a
+        class="btn text-white btn-floating m-1 button-texture"
+        style="background-color: #dd4b39;"
+        href="https://www.wazirssecurities.com/"
+        role="button"
+        ><i class="fab fa-google"></i
+      ></a>
+
+      <!-- Instagram -->
+      <a
+        class="btn text-white btn-floating m-1 button-texture"
+        style="background-color: #ac2bac;"
+        href="https://www.instagram.com/wazirssecurities/"
+        role="button"
+        ><i class="fab fa-instagram"></i
+      ></a>
+
+      <!-- Linkedin -->
+      <a
+        class="btn text-white btn-floating m-1 button-texture"
+        style="background-color: #0082ca;"
+        href="https://in.linkedin.com/company/wazirs-securities"
+        role="button"
+        ><i class="fab fa-linkedin-in"></i
+      ></a>
+      <!-- Github -->
+      
+    </section>
+    <!-- Section: Social media -->
+  </div>
+  <!-- Grid container -->
+
+  <!-- Copyright -->
+  <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+    © 2017
+    <a class="text-white copyright" href="https://wazirs.in/" target=_blank> WAZIR’S </a> All Rights Reserved By <span class="company-name-footer"> WAZIR'S GROUP.
+</span></div>
+  <!-- Copyright -->
+</footer>
+  <!-- End Footer -->
+
+  <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <script>
+    window.addEventListener('load', () => {
+      registerSW();
+    });
+ 
+    // Register the Service Worker
+    async function registerSW() {
+      if ('serviceWorker' in navigator) {
+        try {
+          await navigator
+                .serviceWorker
+                .register('serviceworker.js');
+        }
+        catch (e) {
+          console.log('SW registration failed');
+        }
+      }
+    }
+ </script>
+  {%endblock%}
+  <div id="preloader"></div>
+  
+  <!-- Vendor JS Files -->
+  <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  
+  <script src="{% static 'vendor/aos/aos.js' %}"></script>
+  <script src="{% static 'vendor/glightbox/js/glightbox.min.js' %}"></script>
+  <script src="{% static 'vendor/purecounter/purecounter_vanilla.js' %}"></script>
+  <script src="{% static 'vendor/swiper/swiper-bundle.min.js' %}"></script>
+  <script src="{% static 'vendor/isotope-layout/isotope.pkgd.min.js' %}"></script>
+  <script src="{% static 'vendor/php-email-form/validate.js' %}"></script>
+  <script src="{% static 'js/main.js' %}"></script>
+  
+  <script src="{% static 'js/jquery.js' %}"></script>
+  <!-- Template Main JS File -->
+ <script>
+  var data  =  document.querySelector('.form-control');
+  function checksum(g){
+    let regTest = /\d{2}[A-Z]{5}\d{4}[A-Z]{1}[A-Z\d]{1}[Z]{1}[A-Z\d]{1}/.test(g)
+     if(regTest){
+        let a=65,b=55,c=36;
+        return Array['from'](g).reduce((i,j,k,g)=>{ 
+           p=(p=(j.charCodeAt(0)<a?parseInt(j):j.charCodeAt(0)-b)*(k%2+1))>c?1+(p-c):p;
+           return k<14?i+p:j==((c=(c-(i%c)))<10?c:String.fromCharCode(c+b));
+        },0); 
+    }
+    return regTest
+}
+function pram(target){
+  console.log(target.value);
+ if (target.value==30){
+   data.addEventListener('keydown',find);
+  }
+  else if(target.value==100){
+    data.addEventListener('keydown',findname);
+  }
+  else if(target.value==60){
+    data.addEventListener('keydown',panname);
+  }
+}
+ 
+  function find(tar){
+    
+     var target = this.value;
+     let status=checksum(target);
+     console.log(status);
+     
+     if (tar.keyCode==13){
+      if(status==false){
+        modal.style.display = "block";
+        document.querySelector(".message").innerHTML="Please Enter Valid GSTIN Number " 
+      }
+      else{
+      const element = document.createElement('div');
+      element.setAttribute("id", "preloader")
+      var body = document.querySelector('body');
+      body.appendChild(element) 
+      location.replace('/qrscanner/'+target+'/')
+    //  loction.replace('details/'+)
+      }
+     }
+
+  }
+  function findname(tar){
+    
+    var target = this.value;
+    
+    if(tar.keyCode==13){
+    console.log(target)
+    const element = document.createElement('div');
+    element.setAttribute("id", "preloader")
+    var body = document.querySelector('body');
+    body.appendChild(element)
+    location.replace('/byname/'+target+'/')
+   //  loction.replace('details/'+)
+    }
+
+ }
+ function panname(tar){
+    
+  var target = this.value;
+  
+  if(tar.keyCode==13){
+  console.log(target)
+  const element = document.createElement('div');
+  element.setAttribute("id", "preloader")
+  var body = document.querySelector('body');
+  body.appendChild(element)
+   location.replace('/pancard/'+target+'/')
+ //  loction.replace('details/'+)
+  }
+
+}
+let nw ="";
+$(document).ready(function(){
+  $(".btn-check").click(function(){
+    console.log(this.value)
+   if (nw==this.value)
+     {
+      $(".search-bar").slideToggle();
+    }
+    else {
+      $(".search-bar").slideDown();
+    }
+  nw=this.value;
+  })
+ $(".focus").mouseleave(function(){
+    $(".search-bar").hide(600);
+  })
+})
+
+
+
+try {
+let scin= document.querySelector('#sendmesssage')
+scin.addEventListener('click',sendingmessages)
+
+function sendingmessages(){
+  
+$(".loading").show()
+$.ajax(
+  {
+      type:"POST",
+      url: "{%url 'contact'%}",
+      data:{
+               name: document.querySelector('#name').value,
+               email: document.querySelector('#email').value,
+               subject: document.querySelector('#subject').value,
+               message: document.querySelector('#messages').value,
+               csrfmiddlewaretoken: $("input[name=csrfmiddlewaretoken]").val()
+
+      },
+      success: async function( data ) 
+      { 
+        $(".loading").hide()
+        $('.sent-message').html(data['message'])
+        $(".sent-message").show()
+        
+          
+        
+        
+        
+      }
+
+      
+   })
+  
+  
+  };
+}
+catch(err){
+ console.log(err)
+}
+  </script>
+  
+</body>
+
+</html>

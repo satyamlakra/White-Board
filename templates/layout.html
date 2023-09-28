@@ -1,0 +1,218 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<style>
+.card{
+background-color: #99aebccc !important;
+}
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+
+  background: rgba(59, 255, 207, 0.4);
+}
+
+.containers {
+  max-width: 700px;
+  
+  width: 100%;
+  min-height: 400px;
+  height: fit-content;
+  margin: 10px 20px;
+  padding: 40px 50px;
+  line-height: 35px;
+  border-radius: 20px;
+  font-size: 1em;
+  text-align: justify;
+  color: rgba(255, 255, 255, 0.8);
+
+  background: #c9defc;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.containers p a {
+  position: relative;
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.8);
+  border-bottom: 2px solid #3bffcf;
+  cursor: pointer;
+  transition: 0.5s all ease;
+}
+
+a:hover,
+a:focus {
+  color: #3bffcf !important;
+}
+
+a:active {
+  background: rgba(59, 255, 207, 0.15);
+}
+
+span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  padding: 0 10px;
+  border-radius: 20px;
+  font-size: 0.9em;
+  font-weight: 500;
+  pointer-events: none;
+  top: 0%;
+  left: 0%;
+  transform: translate(-22%, -40px);
+  transition: all 0.3s ease;
+
+  color: #2a313b;
+  background: #3bffcf;
+  opacity: 0;
+}
+
+a:hover span {
+  opacity: 1;
+}
+
+span::before {
+  content: "";
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  transform: translateY(70%) rotate(45deg);
+
+  background: #3bffcf;
+  z-index: -1;
+}
+
+</style>  
+{% load crispy_forms_tags %}  
+  {% csrf_token %}
+  <!--Password Reset Confirm-->
+    <div class="container p-5">
+        <h2 class="font-weight-bold mt-3 card-header ">Type  of  Session</h2>
+        <div class="d-flex justify-content-around">
+	    
+        <!-- <p class="card-text">New Password:- </p> -->
+            <div>          
+            <button id='wboard' class="btn btn-primary">Create White Board Session</button>
+            </div>
+            <div>
+            <a href='http://192.168.1.95:3000/' class="btn btn-primary">Join the Session</a>
+            </div>
+      
+    </div>
+    <div class="container p-5">
+
+</div>
+<div class="containers">
+  <table class="table mb-4">
+    <thead>
+      <tr>
+        <th scope="col">No.</th>
+        <th scope="col">Session Name</th>
+
+        <th scope="col">Sessioncode</th>
+      </tr>
+    </thead>
+    <tbody class="dnotify">
+ 
+    
+  {%for i  in data %}
+      <tr>
+        <th scope="row">{{forloop.counter}}</th>
+        <td>{{i.sessioname}}</td>
+        <td class='gst'>{{i.sessionpassword}}</td>
+        <td>
+          <button type="submit" data-value={{i.id}} class="btn btn-danger delete">Delete</button>
+          {% comment %} <button type="submit" data-vaue={{i.id}} class="btn btn-success ms-1 update">Update</button> {% endcomment %}
+        </td>
+      </tr>
+  {%endfor%}     
+  </tbody>
+  </table>
+</div>
+<script src="{%static '/js/jquery.js'%}"></script>
+<script>
+  function deletes(){
+    let deltask = document.querySelectorAll(".delete")
+    for(let i=0; i<deltask.length;i++){
+        deltask[i].addEventListener('click',deleting)
+    }
+}
+deletes()
+function deleting(){
+    // console.log(this.getAttribute('data-value'));
+    $.ajax(
+        {
+            type:"POST",
+            url:"/remove/",
+            data:{
+                uid:this.getAttribute('data-value'),
+                csrfmiddlewaretoken: $("input[name=csrfmiddlewaretoken]").val()
+    
+            },
+            success: async function( data ) 
+
+            { addhtml(data)
+               
+                // $('.vh-100').html("{%for i  in datas%}<h3> {{i.clientname}}</h3><h3> {{i.expiry_date}}</h3>{%endfor%}")
+                
+                deletes() 
+                //caagst()
+            }
+    
+            
+         })
+}
+  function mmsend(){
+    $.ajax(
+        {
+            type:"GET",
+            url:"/postmeet/",
+            data:{
+                    
+                     csrfmiddlewaretoken: $("input[name=csrfmiddlewaretoken]").val()
+    
+            },
+            success: async function( data ) 
+
+            { 
+                
+                console.log(data)
+                
+                addhtml(data)
+                   
+                // $('.vh-100').html("{%for i  in datas%}<h3> {{i.clientname}}</h3><h3> {{i.expiry_date}}</h3>{%endfor%}")
+                deletes() 
+                
+              
+            }
+    
+            
+         })
+  }
+  let pmeet= document.querySelector('#wboard');
+  pmeet.addEventListener('click',mmsend);
+  function addhtml(raw){
+    console.log
+    var ahtm=''    
+    for(let i=0; i<raw.length;i++){
+        ahtm+="<tr><th scope='row'>"+(i+1).toString()+"</th><td>"+raw[i]['sessioname']+"</td><td class='gst'>"+raw[i]['sessionpassword']+"</td><td><button type='submit' data-value="+raw[i]['id']  +" class='btn btn-danger delete'>Delete</button></td></tr>"
+    }
+    $('.dnotify').html(ahtm)
+    }
+</script>
+{% endblock %}

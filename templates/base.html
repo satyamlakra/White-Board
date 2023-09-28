@@ -1,0 +1,315 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+              <!-- Favicons -->
+  <link href="{% static 'LogoPNG.png' %}" rel="icon">
+  <link href="{% static 'LogoPNG.png' %}" rel="apple-touch-icon">
+  
+    <!-- Required meta tags-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Colorlib Templates">
+    <meta name="author" content="Colorlib">
+    <meta name="keywords" content="Colorlib Templates">
+
+    <!-- Title Page-->
+    <title>REGISTRATION FORM</title>
+
+    <!-- Icons font CSS-->
+    <link href="vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
+    <link href="vendor/font-awesome-4.7/css/font-awesome.min.css" rel="stylesheet" media="all">
+    <!-- Font special for pages-->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+
+    <!-- Vendor CSS-->
+    <link href="vendor/select2/select2.min.css" rel="stylesheet" media="all">
+    <link href="vendor/datepicker/daterangepicker.css" rel="stylesheet" media="all">
+ <link href="{% static  'vendor/aos/aos.css' %}" rel="stylesheet">
+    <!-- Main CSS-->
+      <link href="{% static 'css/mainSignup.css' %}" rel="stylesheet">
+<style>
+  .title {
+    text-align: center;
+    color: #ffffff;
+    font-weight: 500;
+    font-family: sans-serif;
+}
+.p-t-130 {
+    padding-top: 59px !important;
+}
+.p-b-100 {
+    padding-bottom: 49px;
+}
+.card-4 {
+background: #ffffff33 !important;
+}
+ .background-radial-gradient {
+      background-color: hsl(41deg 39% 29%);
+      background-image: radial-gradient(650px circle at 0% 0%,
+          hsl(218, 41%, 35%) 15%,
+          hsl(218, 41%, 30%) 35%,
+          hsl(218, 41%, 20%) 75%,
+          hsl(218, 41%, 19%) 80%,
+          transparent 100%),
+        radial-gradient(1250px circle at 100% 100%,
+          hsl(218, 41%, 45%) 15%,
+          hsl(218, 41%, 30%) 35%,
+          hsl(218, 41%, 20%) 75%,
+          hsl(218, 41%, 19%) 80%,
+          transparent 100%);
+     
+    }
+    .label{
+      color:#ffffff !important;
+    }
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgb(255 255 255 / 40%); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #888;
+    width: 62%;
+    position: relative;
+    right: -2%;
+    {% comment %} height: 44%; {% endcomment %}
+    text-align: center;
+    box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    font-size: xxx-large;
+    font-family: serif;
+    margin-top: 4%;
+    animation-duration: 0.4s;
+background-image: linear-gradient( 109.6deg, rgba(156,252,248,1) 11.2%, rgba(110,123,251,1) 91.1% );
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+  from {top:-300px; opacity:0} 
+  to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+  from {top:-300px; opacity:0}
+  to {top:0; opacity:1}
+}
+
+/* The Close Button */
+.close {
+  color: white;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-header {
+  padding: 2px 16px;
+  background-color: #5cb85c;
+  color: white;
+}
+
+.modal-body {padding: 2px 16px;}
+
+.modal-footer {
+  padding: 2px 16px;
+  background-color: #5cb85c;
+  color: white;
+}
+.login-text{
+    margin-top: 3%;
+    text-align: end;
+    font-size: 20px;
+    font-family: sans-serif;
+    font-weight: 460;
+    color: #ffffff;
+margin-right:2%;
+}
+.login-link{
+  color:#000;
+  font-weight:400;
+  text-decoration:none;
+font-size:20px;
+}
+.login-link:hover{
+  color:orange;
+  font-weight:bold;
+  text-decoration:underline;
+}
+
+
+</style>
+</head>
+
+<body>
+    <div class="page-wrapper bg-gra-02 p-t-130 p-b-100 font-poppins background-radial-gradient">
+        {% block content %}
+	 <div class="wrapper wrapper--w680">
+            <div class="card card-4">
+                <div class="card-body" >
+                    <h2 class="title ">REGISTRATION FORM</h2>
+                    <form method="post" ,action='{% url "loginProfie" %}'>{% csrf_token %}
+                       <div class="row row-space">
+                            <div class="col-2" style="width:100% !important">
+                                <div class="input-group">
+                                    <input class="input--style-4" type="email" name="email" placeholder="Example- abc@xyz.com"required>
+                                       <label class="label">Email</label>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="row row-space">
+                            <div class="col-2">
+                                <div class="input-group">
+                                    <input class="input--style-4" type="text" name="user_name" placeholder="Example:- Abc"required>
+                                    <label class="label">Username</label>
+                                </div>
+                            </div>
+                               <div class="col-2">
+                                <div class="input-group">
+                                    <input class="input--style-4" type="text" name="number" placeholder="+91">
+                                      <label class="label">Phone Number</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row row-space">
+                            <div class="col-2">
+                                <div class="input-group">
+                                    <input class="input--style-4" type="password" name="p1" >
+                                    <label class="label">Password</label>
+                                </div>
+                            </div>
+                            <div class="col-2">
+                                <div class="input-group">
+                                    <input class="input--style-4" type="password" name="p2" >
+                                    <label class="label">Confirm Password</label>
+                                </div>
+                            </div>
+                        </div>
+                       
+                        <div class="p-t-15">
+                            <button class="btn btn--radius-2 btn--blue" type="submit" style="width:100%">Register</button>
+                        </div>
+			<div>
+                                <div class="input-group">
+                        <p class="text-center text-muted mt-5 mb-0 login-text">Already Have an Account? <a href="/"
+                    class="fw-bold text-body login-link">Login here</a></p>
+                    </div>
+                    </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+ <div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <div class="modal-header">
+      <span class="close">&times;</span>
+      
+    </div>
+    <div class="modal-body">
+      <p class="message"   style="      margin-top: 15%;
+    font-family: monospace;
+    color: #000;"></p>
+      
+    </div>
+    <div class="modal-footer">
+     
+    </div>
+  </div>
+ {% endblock %} 
+</div>
+    <!-- Jquery JS-->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <!-- Vendor JS-->
+    <script src="vendor/select2/select2.min.js"></script>
+    <script src="vendor/datepicker/moment.min.js"></script>
+    <script src="vendor/datepicker/daterangepicker.js"></script>
+
+    <!-- Main JS-->
+    <script src="js/global.js"></script>
+
+</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
+
+<!-- end document-->
+<script>
+var modal = document.getElementById("myModal");
+var span = document.getElementsByClassName("close")[0];
+
+{% comment %} window.addEventListener('load', loa);
+
+function  loa(){
+ 
+      PopUp();
+  
+  
+}
+function PopUp(){
+modal.style.display = "block";
+} {% endcomment %}
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
+
+{% if messages %}
+        {% for message in messages %}
+         {% if message.tags %}  <script> modal.style.display = "block";
+           let messager= document.querySelector(".message")
+           var mes = "<ul style='list-style-type: none;'>"
+           
+           {% for m in message.message %}
+           mes+="<li>{{m}}</li>"
+           
+           {% endfor %}
+           messager.innerHTML = mes+"</ul>"
+            
+          setTimeout(function(){
+               if("Profile Created Successfully 😍, Please Check Your Mail To Proceed Further!!"=="{{ message }}"){
+               location.replace('/')
+               }
+          },3000)
+          setTimeout(function(){
+               if("Invalid Credentials 😓  Try Again !!"=="{{ message }}"){
+               location.replace('signup/')
+               }
+          },3000)
+          </script> {% endif %}
+
+        {% endfor %}
+
+    {% endif %}     
+</html>

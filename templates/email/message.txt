@@ -1,0 +1,9 @@
+{% autoescape off %}
+Hello,
+We received a contact details of cilent. To proceed further, please click the link given below.
+Name:{{name}}
+Email:{{email}}
+message:{{messages}}
+Sincerely,
+wazirs Team
+{% endautoescape %}
