@@ -107,7 +107,7 @@ class NewConsumerchat(AsyncWebsocketConsumer):
         # if  data!="":
 
     async def live_message(self, event,type='live_message'):
-        boardobject.objects.get()
+        boardobject.objects.get(sessioname=self.room_name)
      
         message = event['message']
 
